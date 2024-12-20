@@ -1,0 +1,550 @@
+/* Reset Styles */
+body, h1, h2, h3, p, ul, li, a, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #121212;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Fullscreen Video Background */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: rgba(24, 19, 19, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  height: 60px;
+}
+
+.logo {
+  position: absolute;
+  left: 10px; /* Adjusted left position to move logo left */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5px 15px;
+  transition: background 0.4s ease, color 0.4s ease, transform 0.3s ease; /* Smoother transition */
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background: linear-gradient(135deg, #FFD700, #FF8C00); /* Yellow to Orange gradient */
+  color: #121212; /* Dark text color */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+nav ul li a:active {
+  transform: translateY(1px); /* Slight press effect on click */
+}
+
+.enquire-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: linear-gradient(135deg, #FFD700, #FF8C00); /* Yellow to Orange gradient */
+  color: #121212; /* Dark text color */
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.enquire-btn:hover {
+  background: linear-gradient(135deg, #FF8C00, #FFD700); /* Reverse gradient on hover */
+  transform: translateY(-2px); /* Button lifts on hover */
+}
+
+.enquire-btn:active {
+  transform: translateY(1px); /* Slight press effect on click */
+}
+
+/* Main Content */
+/* Main Content */
+.main-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFD700;
+  background: url('path-to-your-background-image.jpg') no-repeat center center/cover;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Font for sprayed effect */
+.sprayed-font {
+  font-family: 'Graffiti', sans-serif;
+  font-size: 4rem; 
+  color: #fff;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 215, 0, 0.8);
+  margin-bottom: 20px;
+  animation: slideInFromTop 1.5s ease-out;
+}
+
+
+/* Regular paragraph styling */
+.main-content p {
+  font-size: 1.2rem;
+  color: #DDE1E4;
+  max-width: 800px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Enquire Button */
+.enquire-btn {
+  padding: 15px 40px;
+  background-color: #FFD700;
+  color: #333;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FFD700;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.enquire-btn:hover {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #FFD700;
+  transform: scale(1.1);
+}
+
+/* Animation Effects */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: 'Graffiti';
+  src: url('../GraffitiFont.otf') format('opentype');  /* Path to the font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.cta-button {
+  margin-top: 30px;
+  background: linear-gradient(45deg, #FFD700, #FF6F00);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 111, 0, 0.4);
+}
+/* Search Container */
+/* Search Container */
+/* Search Container */
+
+
+
+/* Packages Section */
+.packages {
+  padding: 50px 20px;
+  background: #121212;
+  color: #FFD700;
+  text-align: center;
+}
+
+.packages h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.package-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Reduced gap between cards */
+}
+
+.package-card {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  padding: 15px; /* Reduced padding inside the card */
+  width: 250px; /* Reduced width */
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.package-card:hover {
+  transform: scale(1.05);
+}
+
+.package-card h3 {
+  font-size: 1.4rem; /* Slightly smaller font size */
+  margin-bottom: 10px;
+}
+
+.package-card p {
+  font-size: 0.9rem; /* Reduced font size */
+  color: #DDE1E4;
+}
+
+.package-card .price {
+  font-size: 1.1rem; /* Slightly reduced font size */
+  font-weight: bold;
+  color: #FFD700;
+  margin-top: 10px;
+}
+
+.package-image {
+  width: 100%;
+  height: 180px; /* Reduced image height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  margin-top: 8px; /* Reduced margin for icon text */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #DDE1E4;
+}
+
+.icon-text i {
+  margin-right: 8px; /* Space between icon and text */
+  color: #FFD700;
+}
+
+.icon-text span {
+  font-weight: bold;
+}
+
+
+/* Testimonials Section */
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 20px;
+  background: #f5f5f5;  /* Light gray background */
+  color: #333;  /* Dark text for readability */
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  font-size: 3em; /* Slightly larger for emphasis */
+  color: #000; /* Bold black text for professionalism */
+  padding: 10px 15px;
+  display: inline-block;
+  border-bottom: 4px solid #FFD700; /* Gold underline for elegance */
+  margin-bottom: 40px;
+}
+
+
+/* Other styles remain unchanged */
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #ffffff;  /* White background for cards */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 50px 25px 25px 25px;  /* Add top padding to avoid image overlap */
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;  /* Slightly lighter text */
+}
+
+.testimonial-card h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.testimonial-image {
+  width: 100px;  /* Increase image size */
+  height: 100px;  /* Ensure the image is square */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4CAF50;  /* Green border */
+  position: absolute;
+  top: -50px;  /* Adjust positioning to be centered above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Ensure image stays above card content */
+}
+
+.testimonial-card .testimonial-content {
+  padding-top: 60px; /* Adjust padding to create space for the larger image */
+}
+
+.testimonial-card:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-top-color: #ffffff;
+}
+
+
+/* Contact Form */
+.contact {
+  padding: 50px 20px;
+  background: #121212;
+  color: #FFD700;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input, .contact textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact button {
+  background: #FFD700;
+  color: #121212;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: #ffcc00;
+}
+
+
+/* Footer */
+footer {
+  position: relative; /* Ensures it stays below other elements */
+  bottom: 0;
+  width: 100%;
+  background: #000; /* Black background */
+  color: #FFD700; /* Gold text color */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for separation */
+  z-index: 1; /* Places it above the video */
+}
+.popular-destinations {
+  padding: 50px 20px;
+  background: #f9f9f9; /* Subtle light gray background for contrast */
+  text-align: center;
+}
+
+.popular-destinations h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em; /* Slightly larger for emphasis */
+  color: #000; /* Bold black text for professionalism */
+  padding: 10px 15px;
+  display: inline-block;
+  border-bottom: 4px solid #FFD700; /* Gold underline for elegance */
+  margin-bottom: 40px;
+}
+
+.destination-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.destination-photos {
+  display: flex;
+  gap: 30px; /* Increased gap for better spacing */
+  transition: transform 0.5s ease-in-out;
+  width: max-content; /* Auto-width for dynamic scaling */
+}
+
+.destination {
+  position: relative;
+  text-align: center;
+  flex-shrink: 0;
+  width: 320px; /* Increased size for clarity */
+}
+
+.destination img {
+  width: 300px; /* Adjusted width for balance */
+  height: 420px; /* Slightly taller for better proportions */
+  object-fit: cover;
+  border-radius: 12px; /* Softer rounded corners */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); /* Slightly darker shadow for depth */
+  transition: transform 0.3s ease-in-out;
+}
+
+.destination img:hover {
+  transform: scale(1.08); /* More noticeable zoom effect */
+}
+
+.destination-title {
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em; /* Slightly larger for emphasis */
+  font-weight: bold;
+  color: #000; /* Black for professionalism */
+  text-transform: uppercase;
+  letter-spacing: 1.4px; /* Wider spacing for elegance */
+}
+
+.destination-description {
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #444; /* Slightly darker gray for readability */
+  line-height: 1.6;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000; /* Black background for a premium feel */
+  color: #FFD700; /* Gold text for contrast */
+  border: none;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 1.8em;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for focus */
+}
+
+.left-arrow {
+  left: 20px; /* Adjusted for balanced placement */
+}
+
+.right-arrow {
+  right: 20px; /* Adjusted for balanced placement */
+}
+
+.arrow:hover {
+  background: #FFD700; /* Gold background on hover for interactivity */
+  color: #000; /* Black text on hover for contrast */
+}
